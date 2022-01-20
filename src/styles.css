@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+a {
+  color: inherit;
+}
+
+body {
+  background-color: #2F0280;
+}
+
+.nav-link {
+  color: aliceblue;
+  font-weight: bold;
+}
+
+.nav-link :hover {
+  color: aqua !important;
+  font-weight: bold;
+}
+
+ul.nav a:hover {
+  color: aquamarine;
+}
+
+ul.nav a:focus {
+  color: aquamarine;
+}
+
+.pointer {
+  cursor: pointer;
+}

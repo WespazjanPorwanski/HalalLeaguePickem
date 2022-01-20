@@ -1,0 +1,22 @@
+<div class="team-picker">
+
+  <app-season-picker></app-season-picker>
+  <div class="container-fluid" *ngFor="let day of week.days">
+    <div class="text-center fw-bold fs-3">DAY {{day.dayNumber}}</div>
+    <div class="row team-picker--wrapper" *ngFor="let match of day.matches">
+      <div class="col-5">
+        <div class="float-end team-picker--team_box pointer" (click)="selectWinner(match,1)"
+             [class.team-picker--team_box--selected]="match.id === 1"
+             [style.background-image]="'url(' + match.firstTeam.src + ')'"></div>
+      </div>
+      <div class="col-2 justify-content-center align-self-center text-center">
+        <span class="fw-bold fs-5">{{match.time}}</span>
+      </div>
+      <div class="col-5 ali">
+        <div class="flow-start team-picker--team_box pointer" (click)="selectWinner(match,2)"
+             [class.team-picker--team_box--selected]="match.id === 2"
+             [style.background-image]="'url(' + match.secondTeam.src + ')'"></div>
+      </div>
+    </div>
+  </div>
+</div>

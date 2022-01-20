@@ -1,0 +1,21 @@
+.team-picker {
+  color: white;
+
+  &--wrapper {
+    padding: 5px;
+  }
+
+  &--team_box {
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+    background-size: cover;
+    border: 4px solid transparent;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+
+    &--selected {
+      border: 4px solid #05B30E;
+    }
+  }
+}
