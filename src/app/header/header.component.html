@@ -1,19 +1,31 @@
 <nav class="navbar fixed-top fw-bold navbar-dark bg-dark">
   <div class="container-fluid">
     <div>
-      <a class="navbar-brand" aria-current="page"  routerLink="picker">HalalLeaguePickem</a>
+<!--      <a *ngIf="!isUserLogged()" class="navbar-brand" aria-current="page" routerLink="">Halal League Pickem</a>-->
+      <span *ngIf="isUserLogged()">
       <ul style="display: inline-block" class="nav justify-content-center">
         <li style="display: inline-block" class="nav-item">
-          <a class="nav-link " aria-current="page" routerLink="picker">Picker</a>
+          <a class="header--nav-padding nav-link " aria-current="page" routerLink="picker">Picker</a>
         </li>
         <li style="display: inline-block" class="nav-item active">
-          <a class="nav-link" aria-current="page" routerLink="ranking">Ranking</a>
+          <a class="header--nav-padding nav-link" aria-current="page" routerLink="ranking">Ranking</a>
         </li>
       </ul>
+      </span>
     </div>
 
     <span class="navbar-text fw-bold">
-      Log in
+      <span *ngIf="isUserLogged()">
+        <span class="header--user-color">{{userName}}</span>
+        <span> | </span>
+        <app-logout></app-logout>
+      </span>
+      <span *ngIf="!isUserLogged()">
+        <app-registration></app-registration>
+        <span> | </span>
+        <app-login></app-login>
+      </span>
     </span>
+
   </div>
 </nav>

@@ -47,3 +47,9 @@ firebase.json
 database.rules.json
 
 .editorconfig
+
+
+# Firebase
+.firebase
+*-debug.log
+.runtimeconfig.json

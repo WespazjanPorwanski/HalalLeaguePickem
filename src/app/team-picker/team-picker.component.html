@@ -1,5 +1,5 @@
-<div class="team-picker">
-
+<div class="team-picker--not-log" *ngIf="!isUserLogged()"></div>
+<div class="team-picker" *ngIf="isUserLogged()">
   <app-season-picker></app-season-picker>
   <div class="container-fluid" *ngFor="let day of week.days">
     <div class="text-center fw-bold fs-3">DAY {{day.dayNumber}}</div>

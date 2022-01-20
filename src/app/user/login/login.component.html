@@ -1,0 +1,28 @@
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Log in</h4>
+    <button type="button" class="btn btn-outline-dark" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <div class="input-group">
+        <input (keydown.enter)="modal.close(loginUser)" [(ngModel)]="loginUser.name" id="name" class="form-control"
+               placeholder="Name">
+      </div>
+      <label for="halalPassword">Password</label>
+      <div class="input-group">
+        <input (keydown.enter)="modal.close(loginUser)" [(ngModel)]="loginUser.password" id="halalPassword"
+               type="password" placeholder="Password"
+               class="form-control">
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer justify-content-center">
+    <button type="button" class="btn btn-outline-dark " (click)="modal.close(loginUser)">Log in</button>
+  </div>
+</ng-template>
+
+<span style="color: ghostwhite" class="pointer" (click)="open(content)">Log in</span>

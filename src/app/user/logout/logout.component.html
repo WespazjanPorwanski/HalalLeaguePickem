@@ -1,0 +1,16 @@
+<ng-template #content let-modal>
+  <input [hidden]="true">
+
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Do you realy want to log out?</h4>
+    <button type="button" class="btn btn-outline-dark" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-footer justify-content-center">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close()">Log out
+    </button>
+  </div>
+
+</ng-template>
+<span style="color: ghostwhite" class="pointer" (click)="open(content)">Log out</span>
