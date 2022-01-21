@@ -16,12 +16,8 @@ export class RankingComponent implements OnInit {
 
   ngOnInit(): void {
     this.loginService.getUsersFromDBbByPoints().subscribe(res => {
-      console.log(res[0].payload.doc.data())
-      if (res[0].payload.doc.data() instanceof Array) {
-        this.ranking = res[0].payload.doc.data()
-      } else {
-        this.ranking = [res[0].payload.doc.data()];
-      }
+      this.ranking = [];
+      res.forEach((r: { payload: { doc: { data: () => User; }; }; }) => this.ranking.push(r.payload.doc.data()))
     })
   }
 

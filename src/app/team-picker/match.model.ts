@@ -5,4 +5,6 @@ export class Match {
   secondTeam!: Team;
   time!: string;
   id!: number;
+  winner!:number;
+  pick!:number;
 }

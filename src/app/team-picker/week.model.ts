@@ -17,7 +17,9 @@ export let week2: Week = {
     {
       matches: [
         {
-          id: 0,
+          id: 211,
+          winner: 0,
+          pick: 0,
           firstTeam: {
             id: 'MSF',
             name: 'Misfits',
@@ -31,7 +33,9 @@ export let week2: Week = {
           }
         },
         {
-          id: 0,
+          id: 212,
+          winner: 0,
+          pick: 0,
           firstTeam: {
             id: 'FNC',
             name: 'Fnatic',
@@ -45,7 +49,9 @@ export let week2: Week = {
           }
         },
         {
-          id: 0,
+          id: 213,
+          winner: 0,
+          pick: 0,
           firstTeam: {
             id: 'SK',
             name: 'SK Gaming',
@@ -59,7 +65,9 @@ export let week2: Week = {
           }
         },
         {
-          id: 0,
+          id: 214,
+          winner: 0,
+          pick: 0,
           firstTeam: {
             id: 'VIT',
             name: 'Vitality',
@@ -73,7 +81,9 @@ export let week2: Week = {
           }
         },
         {
-          id: 0,
+          id: 215,
+          winner: 0,
+          pick: 0,
           firstTeam: {
             id: 'RGE',
             name: 'Rogue',
@@ -88,10 +98,13 @@ export let week2: Week = {
         }
       ],
       dayNumber: 1
-    }, {
+    },
+    {
       matches: [
         {
-          id: 0,
+          id: 221,
+          winner: 0,
+          pick: 0,
           firstTeam: {
             id: 'SK',
             name: 'SK Gaming',
@@ -106,7 +119,9 @@ export let week2: Week = {
         },
 
         {
-          id: 0,
+          id: 222,
+          winner: 0,
+          pick: 0,
           firstTeam: {
             id: 'MAD',
             name: 'Mad Lions',
@@ -121,7 +136,9 @@ export let week2: Week = {
         },
 
         {
-          id: 0,
+          id: 223,
+          winner: 0,
+          pick: 0,
           firstTeam: {
             id: 'BDS',
             name: 'BDS Gaming',
@@ -136,7 +153,9 @@ export let week2: Week = {
         },
 
         {
-          id: 0,
+          id: 224,
+          winner: 0,
+          pick: 0,
           firstTeam: {
             id: 'MSF',
             name: 'Misfits',
@@ -151,7 +170,9 @@ export let week2: Week = {
         },
 
         {
-          id: 0,
+          id: 225,
+          winner: 0,
+          pick: 0,
           firstTeam: {
             id: 'VIT',
             name: 'Vitality',
