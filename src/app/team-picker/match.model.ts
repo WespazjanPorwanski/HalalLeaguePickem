@@ -7,4 +7,5 @@ export class Match {
   id!: number;
   winner!:number;
   pick!:number;
+  matchPoints!:number;
 }

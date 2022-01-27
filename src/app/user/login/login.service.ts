@@ -39,8 +39,22 @@ export class LoginService {
       .snapshotChanges()
   }
 
-  public getUsersFromDBbByPoints(): Observable<any> {
-    return this.firestore.collection('user', ref => ref.orderBy('points', 'desc'))
-      .snapshotChanges()
+  public getUsersFromDBbByPoints(): Promise<any[]> {
+    return new Promise(resolve => {
+      let snapshot = this.firestore.collection('user', ref => ref.orderBy('points', 'desc')).get();
+      let users: any[] = [];
+      snapshot.forEach(user => {
+        user.docs.forEach(doc => {
+          let data = doc.data();
+          let us = new User();
+          // @ts-ignore
+          us.name = data.name;
+          // @ts-ignore
+          us.points = data.points;
+          users.push(us)
+          resolve(users)
+        })
+      });
+    })
   }
 }

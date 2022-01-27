@@ -9,6 +9,6 @@ export class User {
 
 export class UserWeek {
   user!: User;
-  week!: Week;
+  weeks!: Week[];
   points!: number;
 }

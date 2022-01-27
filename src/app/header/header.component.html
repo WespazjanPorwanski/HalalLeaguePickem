@@ -10,6 +10,12 @@
         <li style="display: inline-block" class="nav-item active">
           <a class="header--nav-padding nav-link" aria-current="page" routerLink="ranking">Ranking</a>
         </li>
+        <li style="display: inline-block" class="nav-item active">
+          <a class="header--nav-padding nav-link" aria-current="page" routerLink="results">Results</a>
+        </li>
+        <li style="display: inline-block" *ngIf="userName === 'prwn'" class="nav-item active">
+          <a class="header--nav-padding nav-link" aria-current="page" routerLink="admin">Admin</a>
+        </li>
       </ul>
       </span>
     </div>

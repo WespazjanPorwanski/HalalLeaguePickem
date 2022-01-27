@@ -2,17 +2,20 @@ import {Match} from "./match.model";
 
 export class Week {
   days!: Day[];
+  weekId!: string;
   weekNumber!: number;
 }
 
 export class Day {
   matches!: Match[];
   dayNumber!: number;
+  dayPoints!:number;
 }
 
 
 export let week2: Week = {
   weekNumber: 2,
+  weekId:'2022|1|2',
   days: [
     {
       matches: [
@@ -20,6 +23,7 @@ export let week2: Week = {
           id: 211,
           winner: 0,
           pick: 0,
+          matchPoints:0,
           firstTeam: {
             id: 'MSF',
             name: 'Misfits',
@@ -36,6 +40,7 @@ export let week2: Week = {
           id: 212,
           winner: 0,
           pick: 0,
+          matchPoints:0,
           firstTeam: {
             id: 'FNC',
             name: 'Fnatic',
@@ -52,6 +57,7 @@ export let week2: Week = {
           id: 213,
           winner: 0,
           pick: 0,
+          matchPoints:0,
           firstTeam: {
             id: 'SK',
             name: 'SK Gaming',
@@ -68,6 +74,7 @@ export let week2: Week = {
           id: 214,
           winner: 0,
           pick: 0,
+          matchPoints:0,
           firstTeam: {
             id: 'VIT',
             name: 'Vitality',
@@ -84,6 +91,7 @@ export let week2: Week = {
           id: 215,
           winner: 0,
           pick: 0,
+          matchPoints:0,
           firstTeam: {
             id: 'RGE',
             name: 'Rogue',
@@ -97,7 +105,8 @@ export let week2: Week = {
           }
         }
       ],
-      dayNumber: 1
+      dayNumber: 1,
+      dayPoints: 0
     },
     {
       matches: [
@@ -105,6 +114,7 @@ export let week2: Week = {
           id: 221,
           winner: 0,
           pick: 0,
+          matchPoints:0,
           firstTeam: {
             id: 'SK',
             name: 'SK Gaming',
@@ -122,6 +132,7 @@ export let week2: Week = {
           id: 222,
           winner: 0,
           pick: 0,
+          matchPoints:0,
           firstTeam: {
             id: 'MAD',
             name: 'Mad Lions',
@@ -139,6 +150,7 @@ export let week2: Week = {
           id: 223,
           winner: 0,
           pick: 0,
+          matchPoints:0,
           firstTeam: {
             id: 'BDS',
             name: 'BDS Gaming',
@@ -156,6 +168,7 @@ export let week2: Week = {
           id: 224,
           winner: 0,
           pick: 0,
+          matchPoints:0,
           firstTeam: {
             id: 'MSF',
             name: 'Misfits',
@@ -173,6 +186,7 @@ export let week2: Week = {
           id: 225,
           winner: 0,
           pick: 0,
+          matchPoints:0,
           firstTeam: {
             id: 'VIT',
             name: 'Vitality',
@@ -186,7 +200,8 @@ export let week2: Week = {
           }
         }
       ],
-      dayNumber: 2
+      dayNumber: 2,
+      dayPoints: 0
     }
   ],
 }

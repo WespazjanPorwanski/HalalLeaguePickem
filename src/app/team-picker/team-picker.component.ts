@@ -12,8 +12,8 @@ import {UserWeekService} from "../user/user-week.service";
 })
 export class TeamPickerComponent implements OnInit {
 
-  week: Week = week2;
-  userWeek: UserWeek = {user: new User(), week: new Week(), points: 0};
+  weeks: Week[] = [week2];
+  userWeek: UserWeek = {user: new User(), weeks: this.weeks, points: 0};
 
   constructor(private loginService: LoginService, private userWeekService: UserWeekService) {
   }
@@ -22,9 +22,9 @@ export class TeamPickerComponent implements OnInit {
     this.userWeek.user = this.loginService.currentUser;
     this.userWeekService.getUserWeek(this.userWeek).subscribe(res => {
       if (res && res.length > 0) {
-        this.userWeek.week = res[0].payload.doc.data().week;
+        this.userWeek.weeks = res[0].payload.doc.data().weeks;
       } else {
-        this.userWeek.week = this.week;
+        this.userWeek.weeks = this.weeks;
       }
     })
   }

@@ -18,10 +18,14 @@ import {AngularFirestoreModule} from "@angular/fire/compat/firestore";
 import {FormsModule} from "@angular/forms";
 import { HomeComponent } from './home/home.component';
 import { LogoutComponent } from './user/logout/logout.component';
+import { AdminPanelComponent } from './admin-panel/admin-panel.component';
+import { ResultsComponent } from './results/results.component';
 
 const routes: Routes = [
   {path: 'ranking', component: RankingComponent},
   {path: 'picker', component: TeamPickerComponent},
+  {path: 'results', component: ResultsComponent},
+  {path: 'admin', component: AdminPanelComponent},
   {path: 'home', component: HomeComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'}
 ]
@@ -36,7 +40,9 @@ const routes: Routes = [
     LoginComponent,
     RegistrationComponent,
     HomeComponent,
-    LogoutComponent
+    LogoutComponent,
+    AdminPanelComponent,
+    ResultsComponent
   ],
   imports: [
     BrowserModule,

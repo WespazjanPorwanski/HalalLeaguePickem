@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {User, UserWeek} from "./user.model";
+import {UserWeek} from "./user.model";
 import {AngularFirestore} from "@angular/fire/compat/firestore";
 import {Observable} from "rxjs";
 
@@ -13,15 +13,25 @@ export class UserWeekService {
 
   public addUserWeek(userWeek: UserWeek) {
     this.firestore
-      .collection('userWeek')
+      .collection('asdasd')
       .doc(userWeek.user.name)
       .set(userWeek)
       .then(res => {
+        console.log("")
       }, err => console.log(err));
   }
 
   public getUserWeek(userWeek: UserWeek): Observable<any> {
     return this.firestore.collection('userWeek', ref => ref.where('user.name', '==', userWeek.user.name))
       .snapshotChanges()
+  }
+
+  public async getAllUserWeek(): Promise<any[]> {
+    let snapshot = await this.firestore.collection('userWeek').get()
+    let userWeeks: any[] = [];
+    snapshot.forEach(userWeek => {
+      console.log(userWeek)
+    });
+    return userWeeks;
   }
 }
