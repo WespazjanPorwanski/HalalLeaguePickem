@@ -1,0 +1,35 @@
+<div class="results--not-log" *ngIf="!isUserLogged()"></div>
+<div class="results" *ngIf="isUserLogged()">
+  <app-season-picker></app-season-picker>
+  <div class="container-fluid" *ngFor="let week of userWeek.weeks">
+    <div class="container-fluid" *ngFor="let day of week.days">
+      <div class="text-center fw-bold fs-3">DAY {{day.dayNumber}}</div>
+      <div class="row results--wrapper" *ngFor="let match of day.matches">
+        <div class="col-4">
+          <div class="float-end pointer results--winner_box"
+               [class.results--winner_box--winner]="match.winner === 1">
+
+            <div class="float-end results--team_box pointer"
+                 [class.results--team_box--selected]="match.pick === 1"
+                 [style.background-image]="'url(' + match.firstTeam.src + ')'"></div>
+          </div>
+        </div>
+        <div class="col-2 justify-content-center align-self-center text-center">
+          <span class="fw-bold fs-5">{{match.time}}</span>
+        </div>
+        <div class="col-4">
+          <div class=" flow-start pointer results--winner_box"
+               [class.results--winner_box--winner]="match.winner === 1">
+            <div class="flow-start results--team_box pointer"
+                 [class.results--team_box--selected]="match.pick === 2"
+                 [style.background-image]="'url(' + match.secondTeam.src + ')'"></div>
+          </div>
+        </div>
+        <div class="col-2">
+            {{match.matchPoints}}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
